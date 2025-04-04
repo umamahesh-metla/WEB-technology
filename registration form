@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Admission Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: normal;
+        }
+        
+        .form-row {
+            display: flex;
+        }
+        
+        .form-column {
+            flex: 1;
+            padding: 0 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: ;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        .name-inputs {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .name-inputs input {
+            flex: 1;
+        }
+        
+        .radio-container {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .radio-option input[type="radio"],
+        .radio-option input[type="checkbox"] {
+            display: none;
+        }
+        
+        .radio-circle {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #666;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: #fff;
+        }
+        
+        .radio-option input[type="radio"]:checked + .radio-circle,
+        .radio-option input[type="checkbox"]:checked + .radio-circle {
+            background-color: #666;
+        }
+        .horizontal-options {
+    display: flex;
+    gap: 20px;
+}
+.inline-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.inline-label {
+    width: 160px;
+}
+
+.inline-input {
+    flex: 1;
+}
+
+.name-inputs {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.name-inputs input {
+    flex: 1;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>General Admission Registration</h1>
+        
+        <form>
+            <div class="form-row">
+                <div class="form-column">
+                    <div class="form-group inline-group">
+                        <label for="name" class="inline-label">Name</label>
+                        <div class="inline-input name-inputs">
+                            <input type="text" id="first-name" placeholder="First Name">
+                            <input type="text" id="last-name" placeholder="Last Name">
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="form-group inline-group" width="200%">
+                        <label for="email">Email</label><div class="name-inputs" >  
+                        </div>
+                        <input type="email" id="email" placeholder="sample@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-container horizontal-options">
+                            <label class="radio-option">
+                                <input type="radio" name="gender" value="male">
+                                <span class="radio-circle"></span>
+                                Male
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="gender" value="female">
+                                <span class="radio-circle"></span>
+                                Female
+                            </label>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-group inline-group">
+                        <label for="phone" class="inline-label">Phone</label>
+                        <input type="tel" id="phone" class="inline-input">
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="form-group inline-group">
+                        <label for="emergency-contact" class="inline-label">Emergency Contact</label>
+                        <input type="tel" id="emergency-contact" class="inline-input">
+                    </div>
+                    
+                    
+                    
+                    <div class="form-group">
+                        <label>Do you require parking?</label>
+                        <div class="radio-container">
+                            <label class="radio-option">
+                                <input type="radio" name="parking" value="yes">
+                                <span class="radio-circle"></span>
+                                Yes
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="parking" value="no">
+                                <span class="radio-circle"></span>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>What is your room preference?</label>
+                        <div class="radio-container">
+                            <label class="radio-option">
+                                <input type="radio" name="room" value="single">
+                                <span class="radio-circle"></span>
+                                Single Room
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="room" value="shared">
+                                <span class="radio-circle"></span>
+                                Shared Room
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="room" value="none">
+                                <span class="radio-circle"></span>
+                                No Room Needed
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-column">
+                    <div class="form-group">
+                        <label>Do you have dietary restrictions?</label>
+                        <div class="radio-container">
+                            <label class="radio-option">
+                                <input type="radio" name="diet" value="none">
+                                <span class="radio-circle"></span>
+                                None
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="diet" value="vegetarian">
+                                <span class="radio-circle"></span>
+                                Vegetarian
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="diet" value="gluten">
+                                <span class="radio-circle"></span>
+                                Gluten Allergy
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="diet" value="lactose">
+                                <span class="radio-circle"></span>
+                                Lactose Allergy
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="diet" value="nut">
+                                <span class="radio-circle"></span>
+                                Nut Allergy
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="diet" value="shellfish">
+                                <span class="radio-circle"></span>
+                                Shellfish Allergy
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>What activities will you attend?</label>
+                        <div class="radio-container">
+                            <label class="radio-option">
+                                <input type="checkbox" name="activities" value="gala">
+                                <span class="radio-circle"></span>
+                                Awards Gala Dinner
+                            </label>
+                            <label class="radio-option">
+                                <input type="checkbox" name="activities" value="luncheon">
+                                <span class="radio-circle"></span>
+                                Luncheon
+                            </label>
+                            <label class="radio-option">
+                                <input type="checkbox" name="activities" value="townhall">
+                                <span class="radio-circle"></span>
+                                Town Hall
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Do you want to see the list of other attendees and their profiles on the official event app?</label>
+                        <div class="radio-container">
+                            <label class="radio-option">
+                                <input type="radio" name="attendees" value="yes">
+                                <span class="radio-circle"></span>
+                                Yes
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="attendees" value="no">
+                                <span class="radio-circle"></span>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
