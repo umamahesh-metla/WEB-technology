@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeeksforGeeks Random Color Generator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #538bed,#b75189);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      text-align: center;
+      width: 400px;
+    }
+    h1 {
+      color: #28a745;
+      margin-bottom: 20px;
+    }
+    .color-box {
+      background-color: #548714;
+      color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #f5f5f5;
+      border: none;
+      padding: 12px 20px;
+      margin: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+    #dark-mode-btn {
+      background-color: #333;
+      color: white;
+    }
+    .dark-mode {
+      background: linear-gradient(to right, #0f0f0f, #333);
+      color: white;
+    }
+    .dark-mode .container {
+      background-color: #1e1e1e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GeeksforGeeks Random Color Generator</h1>
+    <div class="color-box">
+      <p id="hex">#548714</p>
+      <p id="rgb">RGB(84, 135, 20)</p>
+    </div>
+    <div class="button-container">
+      <button onclick="generateColor()">🔄 Generate Color</button>
+      <button onclick="copyToClipboard('hex')">📋 Copy HEX</button>
+      <button onclick="copyToClipboard('rgb')">📋 Copy RGB</button>
+      <button id="dark-mode-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </div>
+  </div>
+
+  <script>
+    function generateColor() {
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+      const hexColor = `#${randomColor}`;
+      const r = parseInt(randomColor.substring(0, 2), 16);
+      const g = parseInt(randomColor.substring(2, 4), 16);
+      const b = parseInt(randomColor.substring(4, 6), 16);
+      const rgbColor = `RGB(${r}, ${g}, ${b})`;
+
+      document.getElementById('hex').innerText = hexColor;
+      document.getElementById('rgb').innerText = rgbColor;
+      document.querySelector('.color-box').style.backgroundColor = hexColor;
+    }
+
+    function copyToClipboard(type) {
+      const textToCopy = document.getElementById(type).innerText;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert(`${type.toUpperCase()} copied to clipboard: ${textToCopy}`);
+      });
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
