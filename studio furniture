@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Furniture</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 2px;
+      margin-left: 15px;
+      margin-right: 15px;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 10%;
+      background-color: white;
+      align-items: center;
+      position: relative;
+    }
+
+    h1 {
+    font-family: 'Bebas Neue', 'Anton', 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      width: 40rem;
+      align-items: center;
+    }
+
+    .icons {
+      display: flex;
+      gap: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      justify-content: flex-end;
+      padding-right: 20px;
+      position: absolute;
+      right: 10%;
+      top:20px;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e3f6f5;
+      padding: 80px 0;
+      height: 80vh;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text p {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 60px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: transparent;
+      color: black;
+      border-color: black;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #006666;
+      color: white;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 90%;
+      max-width: 600px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>AUROS.</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icons">
+        <i class="fas fa-search"></i>    
+        <i class="fas fa-user"></i>      
+        <i class="fas fa-shopping-cart"></i>  
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p>|  Furniture 2022</p>
+      <br>
+      <h2>STUDIO <br> FURNITURE</h2>
+      <p>$650.00</p>
+      <br>
+      <button onclick="exploreCollection()">Browse collection</button>
+    </div>
+    <div class="hero-image">
+      <img src="Picsart_25-03-26_11-38-12-502 (1).png" alt="Chair" />
+    </div>
+  </section>
+
+  <script>
+    function exploreCollection() {
+      alert("Explore our latest collection of Studio Furniture!");
+    }
+  </script>
+</body>
+</html>
